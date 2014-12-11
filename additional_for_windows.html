@@ -1,0 +1,60 @@
+<!DOCTYPE DIR PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="tudadesign : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>TU Darmstadt LateX Design</title>
+  </head>
+
+<html>
+<h1 id="installation-1">Manuelle Installation</h5>
+<p>In einen beliebigen Ordner die Zip-Dateien mit den Schriftarten (<strong>tudfonts-tex_current.zip</strong>) und dem TUD-Design (<strong>latex-tuddesign_current.zip</strong>) und evt. fachbereichs-spezifische Vorgaben für Abschlussarbeiten (<strong>latex-tuddesign-thesis_current.zip</strong>) herunterladen und entpacken. Aus den zwei (bzw. drei) Ordnern einen machen (Unterordner mit gleichem Namen zusammenfassen).<br /><em>Vorsicht! Ordner mit Leerzeichen im Namen unbedingt vermeiden! Leerzeichen müssen gesondert behandelt werden (Überbleibsel der 80er Jahre) und sind generell eine schlechte Idee.</em></p>
+
+<ol start="1" style="list-style-type: decimal">
+<li>Eine Konsole mit Administrator-Rechten öffnen (z. B. mit der Eingabe von runas /user:Administrator cmd unter Ausführen im Startmenü)</li>
+<li>In das Verzeichnis wechseln, in dem das eben entpackte texmf-Verzeichnis liegt (mit <code>cd &lt;DIR&gt;</code>).</li>
+<li>Den Ordner **texmf* inklusive seines Inhalts löschen. <code>rmdir /Q /S &quot;texmf\fonts\map\dvipdfm</code></li>
+<li>Kopieren der Unterverzeichnisse von texmf in den Ordner %PROGRAMFILES%. <code>xcopy texmf &quot;%PROGRAMFILES%\tuddesign&quot; /E /I</code></li>
+<li>Dannach den Befehl <code>mo_admin</code> ausführen.</li>
+<li>Zum Reiter Roots wechseln, den [add]-Knopf drücken und das Verzeichnis **%PROGRAMFILES%* auswählen. Dann auf [OK] drücken.</li>
+</ol>
+<p><em>Im Unterschied zur Installation unter MikTeX 2.8 werden folgende Befehle nicht in der Admin-Konsole ausgeführt, sonder in einer gewöhnlichen, also z. B. mit der Eingabe von cmd unter Ausführen im Startmenü.</em></p>
+<ol start="7" style="list-style-type: decimal">
+<li>Dann in der Konsole den Befehl <code>initexmf --update-fndb</code> ausführen.</li>
+<li>Den Befehl <code>initexmf --edit-config-file=updmap</code> ausführen.</li>
+<li>Folgende Zeilen in die sich öffnende Datei einfügen und speichern:</li>
+</ol>
+<blockquote>
+<p>Map 5ch.map<br />Map 5fp.map<br />Map 5sf.map</p>
+</blockquote>
+<p><em>Entspricht dem Inhalt der Datei updmap.d0tex-tudfonts.cfg.</em></p>
+<ol start="10" style="list-style-type: decimal">
+<li><p>Dann den Befehl <code>initexmf --mkmaps</code> ausführen.</p></li>
+<li><p>Danach funktioniert es manchmal, dass aber zuverlässig. Happy Working! :-)</p></li>
+</ol>
+
+<h5 id="wenn-es-nicht-fuktioniert-hat">Wenn es nicht fuktioniert hat</h5>
+<p>Häufig hilft es mit dem Paketmanager (admin) <strong>mpm_mfc_admin</strong> ein beliebiges Paket zu installieren. Auch ein reboot kann nicht schaden, da MikTeX Options in der registy einträge ändert.</p>
+
+<h5 id="kontrollmöglichkeit-für-die-schriftarten">Kontrollmöglichkeit für die Schriftarten</h5>
+<p>Sollte es zu Problemen mit den Schriftarten kommen, empfiehlt sich ein Blick in die Datei psfonts.map, die man unter **C:und EinstellungenUsers.8* findet. In ihr sollten folgende Einträge, i. d. R. in den ersten Zeilen zu finden sein:</p>
+<blockquote>
+<p>5chb8r Charter-Bold “TeXBase1Encoding ReEncodeFont” &lt;8r.enc &lt;5chb8a.pfb<br />5chbo8r Charter-Bold “TeXBase1Encoding ReEncodeFont 0.167 SlantFont” &lt;8r.enc &lt;5chb8a.pfb<br />5chr8r Charter “TeXBase1Encoding ReEncodeFont” &lt;8r.enc &lt;5chr8a.pfb<br />5chri8r Charter-Italic “TeXBase1Encoding ReEncodeFont” &lt;8r.enc &lt;5chri8a.pfb<br />5chro8r Charter “TeXBase1Encoding ReEncodeFont 0.167 SlantFont” &lt;8r.enc &lt;5chr8a.pfb<br />5fpm8r FrontPageMedium “TeXBase1Encoding ReEncodeFont” &lt;8r.enc &lt;5fpm8a.pfb<br />5fpmo8r FrontPageMedium “TeXBase1Encoding ReEncodeFont 0.167 SlantFont” &lt;8r.enc &lt;5fpm8a.pfb<br />5fpr8r FrontPage “TeXBase1Encoding ReEncodeFont” &lt;8r.enc &lt;5fpr8a.pfb<br />5fpro8r FrontPage “TeXBase1Encoding ReEncodeFont 0.167 SlantFont” &lt;8r.enc &lt;5fpr8a.pfb<br />5sfr8r Stafford “TeXBase1Encoding ReEncodeFont” &lt;8r.enc &lt;5sfr8a.pfb<br />5sfro8r Stafford “TeXBase1Encoding ReEncodeFont 0.167 SlantFont” &lt;8r.enc &lt;5sfr8a.pfb</p>
+</blockquote>
+<p>Ist dies nicht der Fall oder stehen dort zwar die TU Schriftarten, aber mit wesentlich kürzeren Einträgen, so ist zu überprüfen ob das Verzeichniss <strong>texmf-tudfonts</strong> existiert. Es sollte nicht vorhanden bzw. leer sein.</p>
+
+<h5 id="updates">Updates</h5>
+<p>In einen beliebigen Ordner die Zip-Dateien mit den Schriftarten (<strong>tudfonts-tex_current.zip</strong>) und dem TUD-Design (<strong>latex-tuddesign_current.zip</strong>) und evt. fachbereichs-spezifische Vorgaben für Abschlussarbeiten (<strong>latex-tuddesign-thesis_current.zip</strong>) herunter laden und entpacken.</p>
+<ol start="0" style="list-style-type: decimal">
+<li>Eine Konsole mit Administrator-Rechten öffnen (z. B. mit der Eingabe von runas /user:Administrator cmd unter Ausführen im Startmenü)</li>
+<li>In das Verzeichnis wechseln, in dem das eben entpackte texmf-Verzeichnis liegt (mit <code>cd &lt;DIR&gt;</code>).</li>
+<li>Den Ordner <em>texmf</em> inklusive seines Inhalts löschen.<br /><code>rmdir /Q /S &quot;texmf\fonts\map\dvipdfm&quot;</code></li>
+<li>Kopieren der Unterverzeichnisse von texmf in den Ordner <strong>%PROGRAMFILES%.</strong><br /><code>xcopy texmf &quot;%PROGRAMFILES%\tuddesign&quot; /E /I</code></li>
+<li>In der Konsole den Befehl<br /><code>initexmf --admin --update-fndb</code> ausführen.</li>
+</ol>
+</html>
