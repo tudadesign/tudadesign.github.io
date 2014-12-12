@@ -1,11 +1,30 @@
+html {
+	background-color: #EEEEEE;
+}
+
 body {
 	font-family: serif;
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	background-color: #FFFFFF;
+	border-left: 2px solid #BBBBBB;
+	border-right: 2px solid #BBBBBB;
+	border-bottom: 2px solid #BBBBBB;
+	padding: 25pt;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: Tahoma, Verdana, sans-serif;
 }
 
+h1 {
+	font-size: 250%;
+}
 h2 {
-	font-size-adjust: +10;
+	font-size: 220%;
+}
+h3 {
+	font-size: 150%;
 }
