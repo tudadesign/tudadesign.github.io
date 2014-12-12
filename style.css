@@ -13,10 +13,12 @@ body {
 	border-right: 2px solid #BBBBBB;
 	border-bottom: 2px solid #BBBBBB;
 	padding: 25pt;
+	padding-top: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: Tahoma, Verdana, sans-serif;
+	margin-bottom: 0;
 }
 
 h1 {
@@ -27,4 +29,10 @@ h2 {
 }
 h3 {
 	font-size: 150%;
+}
+.h1 {
+	width: 800px;
+	padding: 0;
+	margin-top: 5px;
+	margin-left: 0;
 }
