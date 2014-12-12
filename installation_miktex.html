@@ -12,7 +12,20 @@
   </head>
 
 <html>
-<h1 id="installation-1">Manuelle Installation</h5>
+<body>
+<div id="menu">
+	Navigation:<br />
+	<hr class="nav"/>
+<a href="index.html">Startseite</a><br>
+<a href="documentation.html">Dokumentation</a><br>
+<a href="installation.html">Installation</a><br>
+<a href="who_are_we.html">Wer sind wir</a><br>
+<a href="impressum.html">Impressum</a><br>
+</div>
+<div id="body">
+<img alt="banner" src="img/banner3.png">
+
+<h1 id="installation-1">Manuelle Installation</h1>
 <p>In einen beliebigen Ordner die Zip-Dateien mit den Schriftarten (<strong>tudfonts-tex_current.zip</strong>) und dem TUD-Design (<strong>latex-tuddesign_current.zip</strong>) und evt. fachbereichs-spezifische Vorgaben für Abschlussarbeiten (<strong>latex-tuddesign-thesis_current.zip</strong>) herunterladen und entpacken. Aus den zwei (bzw. drei) Ordnern einen machen (Unterordner mit gleichem Namen zusammenfassen).<br /><em>Vorsicht! Ordner mit Leerzeichen im Namen unbedingt vermeiden! Leerzeichen müssen gesondert behandelt werden (Überbleibsel der 80er Jahre) und sind generell eine schlechte Idee.</em></p>
 
 <ol start="1" style="list-style-type: decimal">
@@ -58,4 +71,6 @@
 <li>Kopieren der Unterverzeichnisse von texmf in den Ordner <strong>%PROGRAMFILES%.</strong><br /><code>xcopy texmf &quot;%PROGRAMFILES%\tuddesign&quot; /E /I</code></li>
 <li>In der Konsole den Befehl<br /><code>initexmf --admin --update-fndb</code> ausführen.</li>
 </ol>
+</div>
+</body>
 </html>

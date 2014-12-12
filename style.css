@@ -26,16 +26,16 @@ img {
 	float: left;
 	position: relative;
 	top: 150px;
-	background-color: var(--backgroundcolor);
-	border-left: 2px solid var(--bordercolor);
-	border-bottom: 2px solid var(--bordercolor);
-	border-top: 2px solid var(--bordercolor);
+	background-color: #FFFFFF;
+	border-left: 2px solid #BBBBBB;
+	border-bottom: 2px solid #BBBBBB;
+	border-top: 2px solid #BBBBBB;
 	padding: 1em;
 }
 
 hr.nav {
 	width: 150px;
-	color: var(--bordercolor);
+	color: #BBBBBB;
 	margin-left: 0;
 }
 
@@ -43,10 +43,10 @@ hr.nav {
 	position: absolute;
 	top: 0;
 	width: 1000px;	
-	background-color: var(--backgroundcolor);
-	border-left: 2px solid var(--bordercolor);
-	border-right: 2px solid var(--bordercolor);
-	border-bottom: 2px solid var(--bordercolor);
+	background-color: #FFFFFF;
+	border-left: 2px solid #BBBBBB;
+	border-right: 2px solid #BBBBBB;
+	border-bottom: 2px solid #BBBBBB;
 	padding: 25pt;
 	padding-top: 0;
 	margin-top: 0;
