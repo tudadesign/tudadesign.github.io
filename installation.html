@@ -1,0 +1,84 @@
+<!DOCTYPE DIR PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="tudadesign : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+
+    <title>TU Darmstadt LateX Design</title>
+  </head>
+
+<html>
+<body>
+<img alt="banner" src="img/banner3.png">
+
+<h1 id="tud-design">TUDA-Design für LaTeX</h1>
+
+<h2 id="installation">Installation</h2>
+
+<p>Die aktuelle Version des TUDA-Design ist <a href="https://github.com/tudadesign/tudadesign/archive/master.zip">hier</a> herunter zu laden.</p>
+
+<h3 id="vorraussetzungen">Vorraussetzungen</h3>
+<p>Grundvorraussetzung für die Nutzung der TU-Design-Klassen ist eine funktionierende Installation einer <a href="http://www.latex-project.org/">LaTeX-Distribution</a>. Üblich sind <a href="https://www.tug.org/texlive/">TeX Live</a> oder <a href="http://miktex.org/">MiKTeX</a>.</p>
+
+<hr>
+
+<h3 id="linux">Linux</h3>
+
+<h4 id="vorbemerkung">Vorbemerkung</h4>
+<p><code>$ code</code> kann von einem normalen Benutzer im Terminal ausgeführt werden.<br /><code># code</code> erfordert Administratorrechte.</p>
+
+<h4 id="globale-installation">Globale Installation</h4>
+<p>Für Debian und -derivate (wie Ubuntu oder Linux Mint) werden .deb-Pakete angeboten. Für den Normalbenutzer ist die Installation darüber vorzuziehen.</p>
+<p>Die globale Installation erfolgt unter Nutzung des Makefiles und GNU Make. Die nötigen Schritte sind wie folgend:</p>
+
+<ol start="1" style="list-style-type: decimal">
+<li>TODO: Schriften installieren</li>
+<li>Das Repository klonen: <code>$ git clone https://github.com/bebro/tuddesign.git</code></li>
+<li>Verzeichnis öffnen: <code>$ cd tuddesign</code></li>
+<li>Installieren: <code># make install</code></li>
+<li>Tex-Tree neu einlesen:<br />TeX Live: <code>$ texhash</code><br />MiKTeX: <code>$ mktexlsr</code></li>
+<li>Dokumentation erstellen: <code>$ make doc</code></li>
+<li>Mit Dokumentation erneut installieren: <code># make install</code></li>
+</ol>
+
+<h4 id="lokale-installation">lokale Installation</h4>
+<p>Falls Änderungen eingebracht werden sollen, ist eine lokale Installation im home-Verzeichnis des Nutzers empfehlenswert. Es muss sichergestellt werden, dass die verwendete LaTeX-Distribution, einen lokalen texmf-tree unterstützt. Bei TeX Live ist dies der Ordner ~/texmf (gespeichert in der Variable TEXMFHOME). Nach klonen des Git-Repository verlinkt man die Inhalte des texmf-Ordners in den lokalen texmf-tree. Nach dem Neu-Einlesen des TeX-tree, sind die Klassen verfügbar. Mittels <code>$make doc</code> lässt sich dann noch die Dokumentation bauen.</p>
+
+<hr>
+
+<h3 id="windows">Windows</h3>
+
+<h4 id="miktex-2.9">MikTeX 2.9</h4>
+
+<h5 id="vorbemerkung-1">Vorbemerkung</h5>
+<p>Um unter windows 7 64bit Probleme mit der Installation von fehlenden Paketen zu vermeiden, muss man bei der Installation von MikTeX unter dem punkt “install missing packages on the fly” auf jeden Fall “yes” anklicken.<br />die Option “ask me first” führt dann bei texcniccenter zu Problemen, da sich warum auch immer das Pop-up Fenster nicht öffnen kann. Dann hängt sich pdf-latex mit der Fehlermeldung<br />&gt;pdflatex.exe GUI framework cannot be initialized</p>
+<p>auf und es wird kein pdf-Dokument erzeugt.<br />Mit dem oben genannten Haken bei “yes” kann man dem ganzen aus dem Weg gehen. Allerdings funktioniert das manchmal nur bei einer Neuinstallation von MikTeX. Nachträglich diese Einstellung unter <strong>start/MikTeX 2.8/maintenance (admin)/settings (admin)</strong> zu ändern funktionierte nicht immer.</p>
+
+<h5 id="installation-1">Installation</h5>
+<p>Die Installation lässte mittels der <strong>Install_for_MikTeX.ps1</strong> ausführen.<br>Sollten hiernach noch Probleme bestehen verwenden sie die Anleitung für eine <a href="installation_miktex.html">manuelle Installation</a>.</p>
+
+<h4 id="texlive2008">TeXlive2008</h4>
+
+<h5 id="allgemeine-hinweise">Allgemeine Hinweise</h5>
+<p>Die vorliegende Anleitung wurde mit TeXlive 2008 unter Windows XP sowie Vista getestet. Über andere Kombinationen kann ich keine Aussage treffen.</p>
+<p>Für Hinweise, Korrekturen, Ergänzungen usw. stehe ich gerne zur Verfügung.</p>
+
+<h5 id="installation">Installation</h5>
+<p>In einen beliebigen Ordner die Zip-Dateien mit den Schriftarten (<strong>tudfonts-tex_current.zip</strong>) und dem TUD-Design (<strong>latex-tuddesign_current.zip</strong>) herunter laden und entpacken. Kopieren der Unterverzeichnisse von texmf in den lokalen Texlive-Ordner. (i. d. R. <strong>C:-2008-local</strong>) Das Verzeichnis updmap.d wird nicht benötigt.</p>
+<ol start="0" style="list-style-type: decimal">
+<li>Eine Konsole öffnen (z. B. mit der Eingabe von cmd unter Ausführen im Startmenü)</li>
+<li>Auf der Konsole den Befehl <code>texhash</code> ausführen</li>
+<li>Dannach die Befehle<br /><code>updmap-sys --enable Map=5ch.map</code><br /><code>updmap-sys --enable Map=5fp.map</code><br /><code>updmap-sys --enable Map=5sf.map</code></li>
+<li>Ein <code>updmap-sys --listmaps</code> sollte (am Ende der riesigen Liste) unter anderem die Zeilen</li>
+</ol>
+<blockquote>
+<p>Map 5ch.map<br />Map 5fp.map<br />Map 5sf.map</p>
+</blockquote>
+<p>zurückliefern.</p>
+<p>Danach sollte alles funktionieren. Denke ich. Ich verwende zur Zeit TeXlive unter Eclipse Galileo mit dem TeXclipse Plugin.</p>
+</body>
+</html>
