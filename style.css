@@ -1,5 +1,7 @@
 html {
 	background-color: #EEEEEE;
+	overflow-y: scroll; 		/*Prevents the centering jump, by forcing the scroll-bar.
+								Possibly invalid CSS, might not work on older Opera browser*/
 }
 
 body {
