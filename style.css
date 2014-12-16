@@ -34,6 +34,7 @@ img {
 #smallnav {
 	width: 100px;
 	height: 100px;
+	z-index: 99;
 	right: 10px;
 	position: fixed;
 	top: 150px;
