@@ -31,6 +31,21 @@ img {
 	padding: 1em;
 }
 
+#smallnav {
+	width: 100px;
+	height: 100px;
+	right: 10px;
+	position: fixed;
+	top: 150px;
+}
+
+@media only screen and (min-width: 760px) {
+	#smallnav {
+		visibility: hidden;
+		position: absolute;
+	}
+}
+
 hr.nav {
 	width: 150px;
 	color: #BBBBBB;
@@ -43,7 +58,6 @@ hr.nav {
 	bottom: 10px;
 	width: 1000px;
 }
-
 
 #body {
 	position: absolute;
