@@ -1,6 +1,6 @@
 html {
 	background-color: #EEEEEE;
-	overflow-y: scroll; 		/*Prevents the centering jump, by forcing the scroll-bar.
+	overflow-y: scroll; /*Prevents the centering jump, by forcing the scroll-bar.
 								Possibly invalid CSS, might not work on older Opera browser*/
 }
 
@@ -37,10 +37,18 @@ hr.nav {
 	margin-left: 0;
 }
 
+#bottombar {
+	color: #BBBBBB;
+	position: inherit;
+	bottom: 10px;
+	width: 1000px;
+}
+
+
 #body {
 	position: absolute;
 	top: 0;
-	width: 1000px;	
+	width: 1000px;
 	background-color: #FFFFFF;
 	border-left: 2px solid #BBBBBB;
 	border-right: 2px solid #BBBBBB;
@@ -48,6 +56,7 @@ hr.nav {
 	border-radius: 0px 0px 25px 25px;
 	padding: 25pt;
 	padding-top: 0;
+	padding-bottom: 50px;
 	margin-top: 0;
 	min-height: 800px;
 }
@@ -61,12 +70,15 @@ h1 {
 	font-size: 250%;
 	margin-top: 5px;
 }
+
 h2 {
 	font-size: 220%;
 }
+
 h3 {
 	font-size: 150%;
 }
+
 .h1 {
 	width: 800px;
 	padding: 0;
