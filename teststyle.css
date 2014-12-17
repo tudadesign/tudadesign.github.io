@@ -1,0 +1,116 @@
+html {
+	background-color: #EEEEEE;
+	overflow-y: scroll; /*Prevents the centering jump, by forcing the scroll-bar.
+								Possibly invalid CSS, might not work on older Opera browser*/
+}
+
+body {
+	font-family: serif;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	width: 1000px;
+}
+
+object {
+position: relative;
+	width: 1025px;
+	background-color: #FFFFFF;
+	min-height: 800px;
+	overflow-x: hidden;
+}
+
+
+img {
+	margin: 0;
+	padding: 0;
+}
+
+#menu {
+	width: 200px;
+	left: -200px;
+	float: left;
+	position: relative;
+	top: 150px;
+	background-color: #FFFFFF;
+	border-left: 2px solid #BBBBBB;
+	border-bottom: 2px solid #BBBBBB;
+	border-top: 2px solid #BBBBBB;
+	border-radius: 25px 0px 0px 25px;
+	padding: 1em;
+}
+
+#smallnav {
+	width: 100px;
+	height: 100px;
+	z-index: 99;
+	right: 10px;
+	position: fixed;
+	top: 150px;
+}
+
+@media only screen and (min-width: 760px) {
+	#smallnav {
+		visibility: hidden;
+		position: absolute;
+	}
+}
+
+hr.nav {
+	width: 150px;
+	color: #BBBBBB;
+	margin-left: 0;
+}
+
+#bottombar {
+	color: #BBBBBB;
+	position: inherit;
+	bottom: 10px;
+	width: 1000px;
+}
+
+#body {
+	position: absolute;
+	top: 0;
+	width: 1000px;
+	background-color: #FFFFFF;
+	border-left: 2px solid #BBBBBB;
+	border-right: 2px solid #BBBBBB;
+	border-bottom: 2px solid #BBBBBB;
+	border-radius: 0px 0px 25px 25px;
+	padding: 25pt;
+	padding-top: 0;
+	padding-bottom: 50px;
+	margin-top: 0;
+	min-height: 1000px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Tahoma, Verdana, sans-serif;
+	margin-bottom: 0;
+}
+
+h1 {
+	font-size: 250%;
+	margin-top: 5px;
+}
+
+h2 {
+	font-size: 220%;
+}
+
+h3 {
+	font-size: 150%;
+}
+
+.h1 {
+	width: 800px;
+	padding: 0;
+	margin-top: 5px;
+	margin-bottom: 0px;
+	margin-left: 0;
+}
+
+img.example {
+	width: 700px;
+}
