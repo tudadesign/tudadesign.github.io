@@ -1,30 +1,26 @@
-<!DOCTYPE DIR PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html>
 <head>
-<meta charset='utf-8'>
-<meta http-equiv="X-UA-Compatible" content="chrome=1">
-<meta name="description" content="tudadesign : ">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <link rel="stylesheet" type="text/css" media="screen" href="style.css">
 
 <title>TU Darmstadt LateX Design</title>
 </head>
 
-<html>
 <body>
 	<div id="menu">
-		Navigation:<br />
-		<hr class="nav" />
+		Navigation:<br>
+		<hr class="nav">
 		<ul>
 			<li><a href="index.html">Startseite</a></li>
 			<li><a href="documentation.html">Dokumentation</a></li>
-			<li><a href="installation.html">Installation</a></li>
+			<li><a href="installation.html">Installation</a>
 			<ul>
 				<li><a href="installation_linux.html">Linux</a></li>
 				<li><a href="installation_miktex.html">MikTeX</a></li>
 				<li><a href="installation_texlive.html">TeXLive</a></li>
-			</ul>
+			</ul></li>
 			<li><a href="advanced.html">Weiterführendes</a>
 			<li><a href="who_are_we.html">Wer sind wir</a></li>
 			<li><a href="links.html">Links</a></li>
@@ -39,7 +35,7 @@
 	<div id="body">
 		<img alt="banner" src="img/banner.png">
 
-		<h1 id="installation">Installation</h1>
+		<h1>Installation</h1>
 
 		<p>
 			Die aktuelle Version des TUDA-Design ist <a href="https://github.com/tudadesign/tudadesign/archive/master.zip">hier</a> herunter zu laden.
@@ -58,7 +54,7 @@
 		<h4 id="vorbemerkung">Vorbemerkung</h4>
 		<p>
 			<code>$ code</code>
-			kann von einem normalen Benutzer im Terminal ausgeführt werden.<br />
+			kann von einem normalen Benutzer im Terminal ausgeführt werden.<br>
 			<code># code</code>
 			erfordert Administratorrechte.
 		</p>
@@ -72,7 +68,7 @@
 			<li>Das Repository klonen: <code>$ git clone https://github.com/tudadesign/tuddesign.git</code></li>
 			<li>Verzeichnis öffnen: <code>$ cd tuddesign</code></li>
 			<li>Installieren: <code># make install</code></li>
-			<li>Tex-Tree neu einlesen:<br />TeX Live: <code>$ texhash</code><br />MiKTeX: <code>$ mktexlsr</code></li>
+			<li>Tex-Tree neu einlesen:<br>TeX Live: <code>$ texhash</code><br>MiKTeX: <code>$ mktexlsr</code></li>
 			<li>Dokumentation erstellen: <code>$ make doc</code></li>
 			<li>Mit Dokumentation erneut installieren: <code># make install</code></li>
 		</ol>
@@ -95,11 +91,11 @@
 		<h5 id="vorbemerkung-1">Vorbemerkung</h5>
 		<p>
 			Um unter windows 7 64bit Probleme mit der Installation von fehlenden Paketen zu vermeiden, muss man bei der Installation von MikTeX unter dem punkt “install missing packages on the fly” auf jeden
-			Fall “yes” anklicken.<br />die Option “ask me first” führt dann bei texcniccenter zu Problemen, da sich warum auch immer das Pop-up Fenster nicht öffnen kann. Dann hängt sich pdf-latex mit der
-			Fehlermeldung<br />&gt;pdflatex.exe GUI framework cannot be initialized
+			Fall “yes” anklicken.<br>die Option “ask me first” führt dann bei texcniccenter zu Problemen, da sich warum auch immer das Pop-up Fenster nicht öffnen kann. Dann hängt sich pdf-latex mit der
+			Fehlermeldung<br>&gt;pdflatex.exe GUI framework cannot be initialized
 		</p>
 		<p>
-			auf und es wird kein pdf-Dokument erzeugt.<br />Mit dem oben genannten Haken bei “yes” kann man dem ganzen aus dem Weg gehen. Allerdings funktioniert das manchmal nur bei einer Neuinstallation von
+			auf und es wird kein pdf-Dokument erzeugt.<br>Mit dem oben genannten Haken bei “yes” kann man dem ganzen aus dem Weg gehen. Allerdings funktioniert das manchmal nur bei einer Neuinstallation von
 			MikTeX. Nachträglich diese Einstellung unter <strong>start/MikTeX 2.8/maintenance (admin)/settings (admin)</strong> zu ändern funktionierte nicht immer.
 		</p>
 
@@ -124,13 +120,13 @@
 			<li>Eine Konsole öffnen (z. B. mit der Eingabe von cmd unter Ausführen im Startmenü)</li>
 			<li>Auf der Konsole den Befehl <code>texhash</code> ausführen
 			</li>
-			<li>Dannach die Befehle<br /> <code>updmap-sys --enable Map=5ch.map</code><br /> <code>updmap-sys --enable Map=5fp.map</code><br /> <code>updmap-sys --enable Map=5sf.map</code></li>
+			<li>Dannach die Befehle<br> <code>updmap-sys --enable Map=5ch.map</code><br> <code>updmap-sys --enable Map=5fp.map</code><br> <code>updmap-sys --enable Map=5sf.map</code></li>
 			<li>Ein <code>updmap-sys --listmaps</code> sollte (am Ende der riesigen Liste) unter anderem die Zeilen
 			</li>
 		</ol>
 		<blockquote>
 			<p>
-				Map 5ch.map<br />Map 5fp.map<br />Map 5sf.map
+				Map 5ch.map<br>Map 5fp.map<br>Map 5sf.map
 			</p>
 		</blockquote>
 		<p>zurückliefern.</p>
